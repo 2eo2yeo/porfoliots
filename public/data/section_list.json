@@ -1,0 +1,43 @@
+[
+    {
+      "id": "about",
+      "title": "About me",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus, temporibus perspiciatis repudiandae nostrum modi doloremque expedita non eius ipsum! Beatae porro adipisci omnis architecto dignissimos. Iusto ipsa inventore adipisci.",
+      "children": [
+        { "component": "Majors2" },
+        { "component": "Jobs2" }
+      ]
+    },
+    {
+      "id": "skill",
+      "title": "My Skills",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis beatae, aliquid ratione commodi nam ex voluptate rem eveniet cupiditate optio natus? Cum, harum eum sint id quod nulla adipisci. Sunt?",
+      "children": [
+        {
+          "component": "Skills2",
+          "children": [
+            { "component": "Coding2" },
+            { "component": "Article2", "props": { "type": "Tools" } },
+            { "component": "Article2", "props": { "type": "Etc" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "My work",
+      "description": "Projects",
+      "children": [
+        { "component": "Categories2" },
+        { "component": "Projects2" }
+      ]
+    },
+    {
+      "id": "testimonial",
+      "title": "Testimonial",
+      "description": "See what they say about me",
+      "children": [
+        { "component": "Testimonials2" }
+      ]
+    }
+  ]

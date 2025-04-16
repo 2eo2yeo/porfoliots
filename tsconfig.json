@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src", // 기준 경로 (보통 src 폴더를 기준으로 설정)
+    "paths": {
+      "@interfaces/*": ["interfaces/*"],       // 예: @interfaces/common → src/interfaces/common.ts
+      "@components/*": ["components/*"], // 예: @components/Header → src/components/Header.tsx
+      "@utils/*": ["utils/*"]        // 유틸리티 함수들 위치
+    }
+  },
+  "include": [
+    "src"
+  ]  
+}

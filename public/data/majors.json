@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "html",
+        "title": "Front-end",
+        "subjects": "HTML, CSS, JavaScript, TypeScript, React, WebAPIs"            
+    },
+    {
+        "icon": "mobile",
+        "title": "Mobile",
+        "subjects": "Android Studio, React Native, iOS, Swift, Java, Kotlin"            
+    },
+    {
+        "icon": "server",
+        "title": "Back-end",
+        "subjects": "Java, JavaScript, Go, Kotlin, Spring, Spring Boot"            
+    }
+]
