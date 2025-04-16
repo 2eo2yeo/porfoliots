@@ -87,12 +87,12 @@ function App() {
   return (
     <>   
       <Header>
-        <Logo2  logo={logoData}/>
+        <Logo2  logo={logoData}/>   {/* 넘어오는 데이터를 받아서 해당컴포넌트에서 타입체크 해야함 */}
         <MenuList2 menuList={menuList} />
         <ToggleButton2 />
       </Header>
       <Content>
-        <Home2 logo={logoData}/>
+        <Home2 logo={logoData}/> 
 
         {sectionList && sectionList.map((section) => ( 
           

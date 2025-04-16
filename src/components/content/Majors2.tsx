@@ -10,32 +10,13 @@ const Majors2: React.FC = () => {
             .then((res) => setMajorList(res.data) )
             .catch((error) => console.log(error));        
     }, []);
-    // const majorList = [
-    //         {
-    //             "icon": "html",
-    //             "title": "Front-end",
-    //             "subjects": "HTML, CSS, JavaScript, TypeScript, React, WebAPIs"            
-    //         },
-    //         {
-    //             "icon": "mobile",
-    //             "title": "Mobile",
-    //             "subjects": "Android Studio, React Native, iOS, Swift, Java, Kotlin"            
-    //         },
-    //         {
-    //             "icon": "server",
-    //             "title": "Back-end",
-    //             "subjects": "Java, JavaScript, Go, Kotlin, Spring, Spring Boot"            
-    //         }
-    //     ];
+
         return (
             <ul className="majors">
                 {majorList && majorList.map((major)=>
                     
                     <li className="major">
-                        <Major2 major={major} />
-                        {/* <Major2 icon={major.icon} 
-                                title={major.title} 
-                                subjects={major.subjects} /> */}
+                        <Major2 major={major} /> 
                     </li>            
                 )}
             </ul>

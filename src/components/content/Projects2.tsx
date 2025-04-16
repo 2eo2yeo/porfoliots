@@ -1,67 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Project2 from './Project2';
 
 
 const Projects2: React.FC = () => {
-    const projectList = [
-            {
-                "img" : "images/projects/project1.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project2.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project3.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project4.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project5.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project6.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project7.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-            {
-                "img" : "images/projects/project8.webp",
-                "alt" : "project1",
-                "title" : "Project #1",
-                "description" : "Clone Coding with HTML, CSS",
-            },
-        ];
+    const [projectList, setProducList ] = useState([]);
+
+
+    useEffect(()=>{
+        axios("data/project.json")
+        .then((res) =>{
+            setProducList(res.data)
+            } )
+            .catch(err => console.log(err))
+    },[])
+
+    
         return (
             <ul className="projects">
                 {projectList && projectList.map((project) => 
                     <li className="project">
                         <Project2
-                            img={project.img}
-                            alt={project.alt}
-                            title={project.title}
-                            description={project.description}
+                            project={project}
                             />
                     </li>            
                 )}

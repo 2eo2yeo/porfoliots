@@ -1,33 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CodingBar2 from './CodingBar2';
+import axios from 'axios';
 
 const Coding2: React.FC = () => {
-    const codeList = [
-            {
-                "title":"HTML",
-                "percent": 70
-            },
-            {
-                "title":"CSS",
-                "percent": 90
-            },
-            {
-                "title":"JavaScript",
-                "percent": 90
-            },
-            {
-                "title":"TypeScript",
-                "percent": 80
-            },
-            {
-                "title":"React",
-                "percent": 98
-            },
-            {
-                "title":"NodeJS",
-                "percent": 60
-            },
-        ];
+
+    const [codeList, setCodeList] = useState([]); 
+
+    useEffect(()=>{
+        axios("data/coding.json")
+            .then((res) =>setCodeList(res.data) )
+            .catch(err => console.log(err))
+    },[])
+
     
         return (
             <article className="sklls__coding">
@@ -35,10 +19,7 @@ const Coding2: React.FC = () => {
                 <ul>
                     {codeList && codeList.map((code) =>
                         <li className="bar">
-                            <CodingBar2 
-                                title={code.title}
-                                percent={code.percent}
-                                />
+                            <CodingBar2 code={code} />
                         </li>                
                     )}
                     

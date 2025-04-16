@@ -25,3 +25,37 @@ export interface Major {
     subjects: string;
 }
 
+
+export interface Job {
+    img: string;
+    alt: string;
+    name: string;
+    period: string;
+}
+
+
+export interface Code {
+    title: string;
+    percent: number;
+}
+
+export interface Category {
+        name: string;
+        count: number
+    }
+    
+
+    export interface Projects {
+        img: string;
+        alt: string;
+        title: string;
+        description: string;
+    }
+
+    export interface Testimonial {
+        img: string;
+        alt: string;
+        description: string;
+        name: string;
+        company: string;
+    }

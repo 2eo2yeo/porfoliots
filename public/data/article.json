@@ -1,0 +1,14 @@
+{
+    "tools": [
+        "Visual Studio Code",
+        "IntelliJ",
+        "Android Studio Code",
+        "iOS development tools",
+        "Eclipse"
+    ],
+    "etc":[
+        "Git",
+        "Scrum Master",
+        "SVN"
+    ]
+}
